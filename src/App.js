@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from 'styled-components'
+import {Container} from "./components/container";
+import React from "react";
 
-function App() {
+
+const AppStl = styled.div` 
+  min-width: 320px;
+  overflow-x: hidden;
+`
+
+const TitleStl = styled.h1`
+  color: #E2CDAE;
+  font-size: 48px;
+  text-align: center;
+`
+
+
+
+
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <AppStl>
+        <TitleStl>Список покупок OMEGA</TitleStl>
+        <Container/>
+      </AppStl>
+  )
 }
-
-export default App;
